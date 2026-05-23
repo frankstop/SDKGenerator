@@ -1,0 +1,26 @@
+{
+  "name": "sdk-generator",
+  "version": "1.0.0",
+  "description": "An elegant, polyglot OpenAPI client SDK generator written in pure TypeScript.",
+  "type": "module",
+  "main": "dist/core/generator.js",
+  "types": "dist/core/generator.d.ts",
+  "bin": {
+    "sdk-generator": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build:cli": "tsc",
+    "build:playground": "vite build --outDir dist/playground",
+    "build": "npm run build:cli && npm run build:playground",
+    "dev:playground": "vite",
+    "start": "node dist/bin/cli.js"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "@types/node": "^20.12.12"
+  }
+}
