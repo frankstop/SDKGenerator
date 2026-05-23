@@ -9,8 +9,6 @@
 
 `SDKGenerator` is an elegant, polyglot OpenAPI client library generator. It parses an OpenAPI spec (v3.0 or v3.1) and outputs beautifully styled, fully typed client libraries in **TypeScript**, **Python**, **Go**, **Ruby**, and **Java**.
 
-Built using **`#caveman` Isomorphic Engineering** (zero-dependency core compiler that runs identically in Node.js and standard web browsers) and wrapped in a premium **Apple-like Light Theme** playground.
-
 ⚡ **Try it live**: [https://frankstop.github.io/SDKGenerator/](https://frankstop.github.io/SDKGenerator/)
 
 ---
@@ -65,11 +63,6 @@ Unlike simple code snippet tools, `SDKGenerator` outputs a **fully packaged, pub
 
 ---
 
-## 🎨 Isomorphic Visual Playground
-
-The interactive web playground is bundled using Vite and hosted on GitHub Pages:
-- **macOS Segmented Controls**: Segmented tab control bar replicating Apple's native sliding white pill indicator.
-- **Xcode Light Theme**: High-contrast light editor and file tree sidebar with standard-compliant syntax colors.
 - **Offline First**: All parsing and generation code runs client-side in your browser. No server backend required.
 
 ---
