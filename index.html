@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDKGenerator - Cast Typed Polyglot Client SDKs Instantly</title>
+  <meta name="description" content="A premium, zero-bloat OpenAPI spec client SDK generator. Paste a spec, instantly cast fully-typed, high-fidelity SDKs for TypeScript, Python, Go, Ruby, and Java.">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script type="module" crossorigin src="/assets/index-CZlq6Ba_.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-vU-UruUF.css">
+</head>
+<body>
+  <!-- Deep Radial Background Glows -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <!-- Impeccable Top Navigation -->
+    <header class="app-header">
+      <div class="logo-area">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+          <h1>SDKGenerator</h1>
+          <span class="badge">v1.0.0</span>
+        </div>
+      </div>
+      <div class="header-tagline">
+        <span class="pulse-indicator"></span> Isomorphic Engine
+      </div>
+      <div class="header-actions">
+        <a href="https://github.com/frankstop/SDKGenerator" target="_blank" class="github-btn" id="github-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Workspace Split Grid -->
+    <main class="workspace-grid">
+      <!-- Left Panel: Specs Control & Editor -->
+      <section class="workspace-panel panel-left" aria-label="OpenAPI Specification Input">
+        <div class="panel-header">
+          <div class="panel-title-area">
+            <span class="panel-number">01</span>
+            <h2>OpenAPI Spec</h2>
+          </div>
+          <div class="spec-selector-wrapper">
+            <label for="sample-spec-select" class="sr-only">Choose a sample specification</label>
+            <select id="sample-spec-select" class="custom-select">
+              <option value="petstore">Sample: Swagger Petstore (v3)</option>
+              <option value="user-api">Sample: User Management API</option>
+              <option value="minimal">Sample: Microservice Auth API</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <textarea id="spec-editor" class="code-textarea" spellcheck="false" placeholder="Paste your OpenAPI JSON spec here..."></textarea>
+          <div id="parse-status-bar" class="status-bar status-success">
+            <span class="status-icon">✔</span>
+            <span id="status-message" class="status-text">Isomorphic parser idle</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Panel: SDK Language Tabs & Viewer -->
+      <section class="workspace-panel panel-right" aria-label="Generated SDK Client Code">
+        <div class="panel-header flex-col">
+          <div class="panel-header-top">
+            <div class="panel-title-area">
+              <span class="panel-number">02</span>
+              <h2>Cast SDK Client</h2>
+            </div>
+            
+            <!-- Floating Copy Code Button -->
+            <button id="copy-code-btn" class="copy-btn" title="Copy code to clipboard">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+
+          <!-- Glassmorphic Tabs Bar -->
+          <nav class="tabs-nav" aria-label="SDK Target Languages">
+            <div class="tab-indicator" id="active-tab-indicator"></div>
+            <button class="tab-btn active" data-lang="ts" id="tab-ts">TypeScript</button>
+            <button class="tab-btn" data-lang="python" id="tab-python">Python</button>
+            <button class="tab-btn" data-lang="go" id="tab-go">Go</button>
+            <button class="tab-btn" data-lang="ruby" id="tab-ruby">Ruby</button>
+            <button class="tab-btn" data-lang="java" id="tab-java">Java</button>
+          </nav>
+        </div>
+
+        <!-- Inner Split: SDK Files Sidebar + Code Viewer -->
+        <div class="panel-body sdk-workspace">
+          <!-- SDK Files Sidebar Navigator -->
+          <aside class="sdk-sidebar" aria-label="Generated Files List">
+            <div class="sidebar-header">Generated Files</div>
+            <ul class="file-list" id="generated-files-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </aside>
+
+          <!-- Standard-compliant Code Viewer -->
+          <article class="code-viewer-container">
+            <pre><code id="code-viewer" class="code-highlight">Select a file to inspect the generated code.</code></pre>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Micro-interaction Copy Toast Alert -->
+  <div id="copy-toast" class="toast-alert" role="alert">
+    <span class="toast-icon">✨</span>
+    <span class="toast-msg">Copied successfully!</span>
+  </div>
+
+</body>
+</html>
