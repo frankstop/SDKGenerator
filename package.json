@@ -13,14 +13,16 @@
     "build:playground": "vite build --outDir dist/playground",
     "build": "npm run build:cli && npm run build:playground",
     "dev:playground": "vite",
+    "deploy": "npm run build && gh-pages -d dist/playground",
     "start": "node dist/bin/cli.js"
   },
   "dependencies": {
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
+    "@types/node": "^20.12.12",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "@types/node": "^20.12.12"
+    "vite": "^5.2.11"
   }
 }
