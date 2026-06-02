@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frankstop.github.io/SDKGenerator/sitemap.xml
